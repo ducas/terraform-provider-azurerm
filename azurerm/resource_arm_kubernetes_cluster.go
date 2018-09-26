@@ -851,7 +851,7 @@ func expandAzureRmKubernetesClusterAddonProfiles(d *schema.ResourceData) map[str
 			config["logAnalyticsWorkspaceResourceID"] = utils.String(workspaceId.(string))
 		}
 
-		addonProfiles["omsAgent"] = &containerservice.ManagedClusterAddonProfile{
+		addonProfiles["omsagent"] = &containerservice.ManagedClusterAddonProfile{
 			Enabled: utils.Bool(enabled),
 			Config:  config,
 		}
